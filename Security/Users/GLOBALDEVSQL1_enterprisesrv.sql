@@ -1,0 +1,5 @@
+IF NOT EXISTS (SELECT * FROM master.dbo.syslogins WHERE loginname = N'GLOBALDEVSQL1\enterprisesrv')
+CREATE LOGIN [GLOBALDEVSQL1\enterprisesrv] FROM WINDOWS
+GO
+CREATE USER [GLOBALDEVSQL1\enterprisesrv] FOR LOGIN [GLOBALDEVSQL1\enterprisesrv]
+GO
